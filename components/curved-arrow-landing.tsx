@@ -1,18 +1,26 @@
-"use client"
+"use client";
 
-import { useRef } from "react"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { CurvedArrow } from "@/components/ui/curved-arrow"
-import { ArrowRight, Github, Star, CheckCircle2, Award, ShieldCheck, Zap } from "lucide-react"
+import { useRef } from "react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { CurvedArrow } from "@/components/ui/curved-arrow";
+import {
+  ArrowRight,
+  Github,
+  Star,
+  CheckCircle2,
+  Award,
+  ShieldCheck,
+  Zap,
+} from "lucide-react";
 
 export function CurvedArrowLanding() {
-  const heroStartRef = useRef<HTMLDivElement>(null)
-  const heroEndRef = useRef<HTMLDivElement>(null)
-  const card1Ref = useRef<HTMLDivElement>(null)
-  const card2Ref = useRef<HTMLDivElement>(null)
-  const card3Ref = useRef<HTMLDivElement>(null)
+  const heroStartRef = useRef<HTMLDivElement>(null);
+  const heroEndRef = useRef<HTMLDivElement>(null);
+  const card1Ref = useRef<HTMLDivElement>(null);
+  const card2Ref = useRef<HTMLDivElement>(null);
+  const card3Ref = useRef<HTMLDivElement>(null);
 
   return (
     <div className="relative overflow-hidden">
@@ -37,8 +45,9 @@ export function CurvedArrowLanding() {
               for React
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-muted-foreground sm:text-xl">
-              Connect any two elements with beautiful, animated paths. Control curve shape, routing, layering,
-              arrowheads, gradients, and responsive behavior in real-time.
+              Connect any two elements with beautiful, animated paths. Control
+              curve shape, routing, layering, arrowheads, gradients, and
+              responsive behavior in real-time.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button size="lg" className="text-lg px-8 py-3" asChild>
@@ -47,11 +56,24 @@ export function CurvedArrowLanding() {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-3 bg-transparent" asChild>
+              <Button
+                variant="outline"
+                size="lg"
+                className="text-lg px-8 py-3 bg-transparent"
+                asChild
+              >
                 <Link href="/docs">Read Docs</Link>
               </Button>
-              <Button variant="ghost" size="lg" className="text-lg px-6 py-3" asChild>
-                <Link href="https://github.com/shadcn-ui/ui" target="_blank">
+              <Button
+                variant="ghost"
+                size="lg"
+                className="text-lg px-6 py-3"
+                asChild
+              >
+                <Link
+                  href="https://github.com/aliezzahn/dynamic-svg-arrow"
+                  target="_blank"
+                >
                   <Github className="mr-2 h-5 w-5" />
                   GitHub
                 </Link>
@@ -97,53 +119,73 @@ export function CurvedArrowLanding() {
           <div className="mt-12 sm:mt-16 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
             <div>
               <div className="text-3xl font-bold sm:text-4xl">25+</div>
-              <div className="mt-1 text-sm text-muted-foreground">Curve Types</div>
+              <div className="mt-1 text-sm text-muted-foreground">
+                Curve Types
+              </div>
             </div>
             <div>
               <div className="text-3xl font-bold sm:text-4xl">20+</div>
-              <div className="mt-1 text-sm text-muted-foreground">Arrow Heads</div>
+              <div className="mt-1 text-sm text-muted-foreground">
+                Arrow Heads
+              </div>
             </div>
             <div>
               <div className="flex items-center justify-center gap-2 text-3xl font-bold sm:text-4xl">
                 <Star className="w-6 h-6 text-yellow-500" /> 4.9
               </div>
-              <div className="mt-1 text-sm text-muted-foreground">Developer Rating</div>
+              <div className="mt-1 text-sm text-muted-foreground">
+                Developer Rating
+              </div>
             </div>
             <div>
               <div className="text-3xl font-bold sm:text-4xl">0 deps</div>
-              <div className="mt-1 text-sm text-muted-foreground">No extra packages</div>
+              <div className="mt-1 text-sm text-muted-foreground">
+                No extra packages
+              </div>
             </div>
           </div>
 
           {/* Feature cards */}
           <div className="mt-12 sm:mt-20 grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div ref={card1Ref} className="relative rounded-2xl bg-card p-6 shadow-lg ring-1 ring-border">
+            <div
+              ref={card1Ref}
+              className="relative rounded-2xl bg-card p-6 shadow-lg ring-1 ring-border"
+            >
               <div className="flex items-center gap-3">
                 <CheckCircle2 className="w-6 h-6 text-green-500" />
                 <h3 className="text-lg font-semibold">Smart Routing</h3>
               </div>
               <p className="mt-3 text-sm text-muted-foreground">
-                Route around obstacles or pick shortest paths with smooth transitions and responsive updates.
+                Route around obstacles or pick shortest paths with smooth
+                transitions and responsive updates.
               </p>
             </div>
 
-            <div ref={card2Ref} className="relative rounded-2xl bg-card p-6 shadow-lg ring-1 ring-border">
+            <div
+              ref={card2Ref}
+              className="relative rounded-2xl bg-card p-6 shadow-lg ring-1 ring-border"
+            >
               <div className="flex items-center gap-3">
                 <ShieldCheck className="w-6 h-6 text-blue-500" />
                 <h3 className="text-lg font-semibold">Layering Control</h3>
               </div>
               <p className="mt-3 text-sm text-muted-foreground">
-                Choose whether heads and lines render above or below elements to avoid overlap artifacts.
+                Choose whether heads and lines render above or below elements to
+                avoid overlap artifacts.
               </p>
             </div>
 
-            <div ref={card3Ref} className="relative rounded-2xl bg-card p-6 shadow-lg ring-1 ring-border">
+            <div
+              ref={card3Ref}
+              className="relative rounded-2xl bg-card p-6 shadow-lg ring-1 ring-border"
+            >
               <div className="flex items-center gap-3">
                 <Award className="w-6 h-6 text-purple-500" />
                 <h3 className="text-lg font-semibold">Beautiful Effects</h3>
               </div>
               <p className="mt-3 text-sm text-muted-foreground">
-                Neon, glow, rainbow, and custom gradients with adjustable stroke, size, and animation.
+                Neon, glow, rainbow, and custom gradients with adjustable
+                stroke, size, and animation.
               </p>
             </div>
 
@@ -175,9 +217,12 @@ export function CurvedArrowLanding() {
           {/* CTA band */}
           <div className="mt-14 sm:mt-20 rounded-xl border bg-gradient-to-r from-purple-600/10 via-blue-600/10 to-teal-500/10 p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             <div>
-              <h4 className="text-xl font-semibold">Build interactive flows in minutes</h4>
+              <h4 className="text-xl font-semibold">
+                Build interactive flows in minutes
+              </h4>
               <p className="text-sm text-muted-foreground mt-1">
-                Start in the Playground and export ready-to-use code with our advanced presets.
+                Start in the Playground and export ready-to-use code with our
+                advanced presets.
               </p>
             </div>
             <div className="flex gap-3">
@@ -192,5 +237,5 @@ export function CurvedArrowLanding() {
         </div>
       </section>
     </div>
-  )
+  );
 }

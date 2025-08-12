@@ -44,7 +44,7 @@ export function SiteHeader() {
             <nav className="flex items-center space-x-1">
               <Button variant="ghost" size="sm" asChild>
                 <Link
-                  href="https://github.com/shadcn-ui/ui"
+                  href="https://github.com/aliezzahn/dynamic-svg-arrow"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -105,7 +105,7 @@ export function SiteHeader() {
                       asChild
                     >
                       <Link
-                        href="https://github.com/shadcn-ui/ui"
+                        href="https://github.com/aliezzahn/dynamic-svg-arrow"
                         target="_blank"
                         rel="noreferrer"
                       >
