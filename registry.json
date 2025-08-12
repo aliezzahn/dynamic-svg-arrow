@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "Roadmap Timeline",
+  "homepage": "https://roadmap.hncore.website",
+  "items": [
+    {
+      "name": "curved-arrow",
+      "type": "registry:block",
+      "title": "Dynamic Curved Arrows",
+      "description": "Connect any two elements with beautiful, animated paths. Control curve shape, routing, layering, arrowheads, gradients, and responsive behavior in real-time.",
+      "registryDependencies": ["badge", "button"],
+      "files": [
+        {
+          "path": "components/ui/curved-arrow.tsx",
+          "type": "registry:component",
+          "target": "components/ui/curved-arrow.tsx"
+        }
+      ]
+    }
+  ]
+}
