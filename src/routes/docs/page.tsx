@@ -1,13 +1,12 @@
-"use client";
-
 import { useEffect, useMemo, useState } from "react";
-import Link from "next/link";
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { CodeBlock } from "@/components/code-block";
 import { Link2, ChevronRight, Star, Sparkles } from "lucide-react";
+import { Link } from "@modern-js/runtime/router";
 
 type Section = { id: string; title: string; intro?: string };
 
@@ -31,9 +30,7 @@ function useActiveSection(ids: string[]) {
       (entries) => {
         const visible = entries
           .filter((e) => e.isIntersecting)
-          .sort((a, b) =>
-            a.boundingClientRect.top > b.boundingClientRect.top ? 1 : -1
-          );
+          .sort((a, b) => (a.boundingClientRect.top > b.boundingClientRect.top ? 1 : -1));
         if (visible[0]) setActive(visible[0].target.id);
       },
       { rootMargin: "0px 0px -70% 0px", threshold: [0.1, 0.5] }
@@ -201,7 +198,7 @@ export default function Example() {
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(800px_300px_at_100%_0%,rgba(16,185,129,0.18),transparent_60%)]" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 relative">
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <Link href="/" className="hover:text-foreground">
+            <Link to="/" className="hover:text-foreground">
               Home
             </Link>
             <ChevronRight className="w-4 h-4" />
@@ -214,8 +211,8 @@ export default function Example() {
               </span>
             </h1>
             <p className="max-w-2xl text-muted-foreground">
-              Connect elements with beautiful, responsive SVG curves. Learn the
-              API, explore patterns, and ship polished flows.
+              Connect elements with beautiful, responsive SVG curves. Learn the API,
+              explore patterns, and ship polished flows.
             </p>
             <div className="flex items-center gap-2">
               <Badge variant="secondary" className="flex items-center gap-1">
@@ -225,10 +222,10 @@ export default function Example() {
             </div>
             <div className="flex items-center gap-3 mt-2">
               <Button asChild>
-                <Link href="/playground">Open Playground</Link>
+                <Link to="/playground">Open Playground</Link>
               </Button>
               <Button asChild variant="outline">
-                <Link href="/#see-it-in-action">See Demos</Link>
+                <Link to="/#see-it-in-action">See Demos</Link>
               </Button>
             </div>
           </div>
@@ -298,11 +295,10 @@ export default function Example() {
               Overview
             </DocHeading>
             <p className="text-muted-foreground mt-2">
-              CurvedArrow draws smart connector paths between two elements or
-              coordinates. It supports multiple curve presets, obstacle routing,
-              animated strokes, gradient styling, and precise arrow head
-              layering so your diagrams and product UIs feel intentional and
-              clear.
+              CurvedArrow draws smart connector paths between two elements or coordinates.
+              It supports multiple curve presets, obstacle routing, animated strokes,
+              gradient styling, and precise arrow head layering so your diagrams and
+              product UIs feel intentional and clear.
             </p>
             <Card className="mt-4">
               <CardContent className="py-4 grid sm:grid-cols-2 gap-3 text-sm">
@@ -334,11 +330,7 @@ export default function Example() {
               Install via your preferred package manager:
             </p>
             <div className="mt-4">
-              <CodeBlock
-                code={installCode}
-                language="bash"
-                filename="install.sh"
-              />
+              <CodeBlock code={installCode} language="bash" filename="install.sh" />
             </div>
           </section>
 
@@ -351,15 +343,11 @@ export default function Example() {
           >
             <DocHeading anchorId="quick-start">Quick Start</DocHeading>
             <p className="text-muted-foreground mt-2">
-              Create two target refs and render CurvedArrow between them. It
-              updates automatically when layout changes.
+              Create two target refs and render CurvedArrow between them. It updates
+              automatically when layout changes.
             </p>
             <div className="mt-4">
-              <CodeBlock
-                code={quickStart}
-                language="tsx"
-                filename="Example.tsx"
-              />
+              <CodeBlock code={quickStart} language="tsx" filename="Example.tsx" />
             </div>
           </section>
 
@@ -372,15 +360,11 @@ export default function Example() {
           >
             <DocHeading anchorId="geometry">Geometry & Curves</DocHeading>
             <p className="text-muted-foreground mt-2">
-              Choose a curve preset and optionally override direction and
-              intensity. Use obstacles to automatically route around elements.
+              Choose a curve preset and optionally override direction and intensity. Use
+              obstacles to automatically route around elements.
             </p>
             <div className="mt-4">
-              <CodeBlock
-                code={geometrySnippet}
-                language="tsx"
-                filename="geometry.tsx"
-              />
+              <CodeBlock code={geometrySnippet} language="tsx" filename="geometry.tsx" />
             </div>
           </section>
 
@@ -393,16 +377,11 @@ export default function Example() {
           >
             <DocHeading anchorId="visuals">Visuals & Animation</DocHeading>
             <p className="text-muted-foreground mt-2">
-              Style the stroke, apply gradients, and enable animation. Most
-              variants are designed to preserve clarity on light and dark
-              backgrounds.
+              Style the stroke, apply gradients, and enable animation. Most variants are
+              designed to preserve clarity on light and dark backgrounds.
             </p>
             <div className="mt-4">
-              <CodeBlock
-                code={visualsSnippet}
-                language="tsx"
-                filename="visuals.tsx"
-              />
+              <CodeBlock code={visualsSnippet} language="tsx" filename="visuals.tsx" />
             </div>
             <div className="mt-4">
               <CodeBlock code={cssTip} language="css" filename="styles.css" />
@@ -411,22 +390,14 @@ export default function Example() {
 
           <Separator />
 
-          <section
-            id="heads"
-            aria-labelledby="heads-heading"
-            className="scroll-mt-28"
-          >
+          <section id="heads" aria-labelledby="heads-heading" className="scroll-mt-28">
             <DocHeading anchorId="heads">Arrow Heads & Layering</DocHeading>
             <p className="text-muted-foreground mt-2">
-              Control start/end arrow heads, their sizes, shapes, and z-order
-              relative to the connecting line and target nodes.
+              Control start/end arrow heads, their sizes, shapes, and z-order relative to
+              the connecting line and target nodes.
             </p>
             <div className="mt-4">
-              <CodeBlock
-                code={headsSnippet}
-                language="tsx"
-                filename="heads.tsx"
-              />
+              <CodeBlock code={headsSnippet} language="tsx" filename="heads.tsx" />
             </div>
           </section>
 
@@ -449,11 +420,7 @@ export default function Example() {
               />
             </div>
             <div className="mt-4">
-              <CodeBlock
-                code={jsonConfig}
-                language="json"
-                filename="preset.json"
-              />
+              <CodeBlock code={jsonConfig} language="json" filename="preset.json" />
             </div>
           </section>
 
@@ -467,19 +434,14 @@ export default function Example() {
             <DocHeading anchorId="performance">Performance</DocHeading>
             <ul className="list-disc pl-6 text-sm text-muted-foreground mt-3 space-y-1">
               <li>
-                Prefer refs over frequent coordinate recalculations in dynamic
-                layouts.
+                Prefer refs over frequent coordinate recalculations in dynamic layouts.
               </li>
               <li>
-                Batch DOM reads/writes; if animating positions, use
-                requestAnimationFrame.
+                Batch DOM reads/writes; if animating positions, use requestAnimationFrame.
               </li>
+              <li>Throttle resize/scroll listeners when observing many nodes.</li>
               <li>
-                Throttle resize/scroll listeners when observing many nodes.
-              </li>
-              <li>
-                Use simpler variants (e.g., "subtle") where many arrows are on
-                screen.
+                Use simpler variants (e.g., "subtle") where many arrows are on screen.
               </li>
             </ul>
           </section>
@@ -493,40 +455,36 @@ export default function Example() {
           >
             <DocHeading anchorId="accessibility">Accessibility</DocHeading>
             <p className="text-muted-foreground mt-2">
-              Ensure connected elements have descriptive labels. Maintain color
-              contrast for strokes and heads. If arrows indicate flow, consider
-              providing an ARIA description or textual summary.
+              Ensure connected elements have descriptive labels. Maintain color contrast
+              for strokes and heads. If arrows indicate flow, consider providing an ARIA
+              description or textual summary.
             </p>
           </section>
 
           <Separator />
 
-          <section
-            id="faq"
-            aria-labelledby="faq-heading"
-            className="scroll-mt-28"
-          >
+          <section id="faq" aria-labelledby="faq-heading" className="scroll-mt-28">
             <DocHeading anchorId="faq">FAQ</DocHeading>
             <div className="mt-3 text-sm text-muted-foreground">
               <p className="mb-2">
-                <strong>Does it require extra packages?</strong> No. It uses SVG
-                and React only.
+                <strong>Does it require extra packages?</strong> No. It uses SVG and React
+                only.
               </p>
               <p className="mb-2">
-                <strong>Can I use static coordinates?</strong> Yes. Pass
-                startX/startY and endX/endY.
+                <strong>Can I use static coordinates?</strong> Yes. Pass startX/startY and
+                endX/endY.
               </p>
               <p className="mb-2">
-                <strong>How do I avoid overlap with content?</strong> Use
-                obstacleElements and head layering.
+                <strong>How do I avoid overlap with content?</strong> Use obstacleElements
+                and head layering.
               </p>
             </div>
             <div className="pt-4 flex gap-3">
               <Button asChild>
-                <Link href="/playground">Try in Playground</Link>
+                <Link to="/playground">Try in Playground</Link>
               </Button>
               <Button asChild variant="outline">
-                <Link href="/#see-it-in-action">See Demos</Link>
+                <Link to="/#see-it-in-action">See Demos</Link>
               </Button>
             </div>
           </section>
