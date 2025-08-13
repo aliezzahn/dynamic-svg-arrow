@@ -1,7 +1,7 @@
-"use client";
+
 
 import React, { useState, useRef, useCallback, useEffect } from "react";
-import Link from "next/link";
+
 import { CurvedArrow } from "@/components/ui/curved-arrow";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -39,6 +39,7 @@ import {
 } from "lucide-react";
 import { toast } from "sonner";
 import { CodeBlock } from "@/components/code-block";
+import { Link } from "@modern-js/runtime/router";
 
 type PanelKey = "curve" | "style" | "arrows" | "elements" | "canvas";
 
@@ -655,7 +656,7 @@ export function CurvedArrowPlayground() {
       <div className="sticky top-14 md:top-16 z-40 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-4 h-12 flex items-center justify-between md:hidden">
         <div className="flex items-center gap-2">
           <Link
-            href="/"
+            to="/"
             className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"
           >
             <Home className="w-4 h-4" />
@@ -714,7 +715,7 @@ export function CurvedArrowPlayground() {
             <div className="flex flex-wrap items-center justify-between gap-2">
               <div className="min-w-0 flex items-center gap-2 overflow-hidden">
                 <Link
-                  href="/"
+                  to="/"
                   className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground shrink-0"
                 >
                   <Home className="w-4 h-4" />
