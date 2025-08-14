@@ -1,11 +1,12 @@
-"use client";
 
-import Link from "next/link";
+
+
 import { Github, Zap, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
+import { Link } from "@modern-js/runtime/router";
 
 export function SiteHeader() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +23,7 @@ export function SiteHeader() {
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 hidden md:block">
         <div className="container mx-auto flex h-14 items-center">
           <div className="mr-4 flex">
-            <Link href="/" className="mr-6 flex items-center space-x-2">
+            <Link to="/" className="mr-6 flex items-center space-x-2">
               <Zap className="h-6 w-6 text-primary" />
               <span className="hidden font-bold sm:inline-block">
                 CurvedArrow
@@ -32,7 +33,7 @@ export function SiteHeader() {
               {navigation.map((item) => (
                 <Link
                   key={item.name}
-                  href={item.href}
+                  to={item.href}
                   className="transition-colors hover:text-foreground/80 text-foreground/60"
                 >
                   {item.name}
@@ -44,7 +45,7 @@ export function SiteHeader() {
             <nav className="flex items-center space-x-1">
               <Button variant="ghost" size="sm" asChild>
                 <Link
-                  href="https://github.com/aliezzahn/dynamic-svg-arrow"
+                  to="https://github.com/aliezzahn/dynamic-svg-arrow"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -61,7 +62,7 @@ export function SiteHeader() {
       {/* Mobile Header */}
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 md:hidden">
         <div className="container flex h-14 items-center justify-between">
-          <Link href="/" className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2">
             <Zap className="h-6 w-6 text-primary" />
             <span className="font-bold">CurvedArrow</span>
           </Link>
@@ -78,7 +79,7 @@ export function SiteHeader() {
               <SheetContent side="right" className="w-[300px] sm:w-[400px]">
                 <div className="flex flex-col space-y-4 mt-4">
                   <Link
-                    href="/"
+                    to="/"
                     className="flex items-center space-x-2 pb-4 border-b"
                   >
                     <Zap className="h-6 w-6 text-primary" />
@@ -89,7 +90,7 @@ export function SiteHeader() {
                     {navigation.map((item) => (
                       <Link
                         key={item.name}
-                        href={item.href}
+                        to={item.href}
                         className="text-lg font-medium transition-colors hover:text-primary"
                         onClick={() => setIsOpen(false)}
                       >
@@ -105,7 +106,7 @@ export function SiteHeader() {
                       asChild
                     >
                       <Link
-                        href="https://github.com/aliezzahn/dynamic-svg-arrow"
+                        to="https://github.com/aliezzahn/dynamic-svg-arrow"
                         target="_blank"
                         rel="noreferrer"
                       >
@@ -127,7 +128,7 @@ export function SiteHeader() {
           {navigation.map((item) => (
             <Link
               key={item.name}
-              href={item.href}
+              to={item.href}
               className="flex flex-col items-center justify-center space-y-1 text-xs font-medium transition-colors hover:text-primary active:text-primary"
             >
               <div className="w-6 h-6 flex items-center justify-center">
