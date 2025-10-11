@@ -10,25 +10,25 @@ It supports gradient strokes, multiple curve styles, custom arrowheads, obstacle
 Built with **[Modern.js](https://modernjs.dev)** — a next-generation React framework for speed and scalability.
 It powers this project’s landing and docs with:
 
-* ⚡️ Ultra-fast builds (Rsbuild / Rspack)
-* 🧩 Hybrid SSR & SSG rendering
-* 📖 Native MDX docs integration
-* 🎨 Seamless Tailwind + TypeScript support
-* 🚀 Optimized static & server deployments
+- ⚡️ Ultra-fast builds (Rsbuild / Rspack)
+- 🧩 Hybrid SSR & SSG rendering
+- 📖 Native MDX docs integration
+- 🎨 Seamless Tailwind + TypeScript support
+- 🚀 Optimized static & server deployments
 
 ---
 
 ## ✨ Features
 
-* 🎯 **Flexible Positioning** – Connect via element refs or coordinates
-* 🌈 **Customizable Curves** – `smooth`, `s-curve`, `wave`, `zigzag`, `around-obstacle`, and more
-* 🧭 **Obstacle Avoidance** – Smart rerouting around elements
-* 🖋️ **Stylable Arrowheads** – Multiple shapes, colors, and fill options
-* 🧩 **Two-Layer Rendering** – Correct z-index stacking (`UNDER` / `OVER`)
-* 💫 **Animations** – Optional motion dash overlay with duration & direction
-* ⚙️ **Performance Optimized** – Uses observers + batched `requestAnimationFrame` updates
-* ♿ **Accessible** – ARIA labels, roles, and semantic layers
-* 🎨 **Tailwind Integration** – Style variants via `class-variance-authority`
+- 🎯 **Flexible Positioning** – Connect via element refs or coordinates
+- 🌈 **Customizable Curves** – `smooth`, `s-curve`, `wave`, `zigzag`, `around-obstacle`, and more
+- 🧭 **Obstacle Avoidance** – Smart rerouting around elements
+- 🖋️ **Stylable Arrowheads** – Multiple shapes, colors, and fill options
+- 🧩 **Two-Layer Rendering** – Correct z-index stacking (`UNDER` / `OVER`)
+- 💫 **Animations** – Optional motion dash overlay with duration & direction
+- ⚙️ **Performance Optimized** – Uses observers + batched `requestAnimationFrame` updates
+- ♿ **Accessible** – ARIA labels, roles, and semantic layers
+- 🎨 **Tailwind Integration** – Style variants via `class-variance-authority`
 
 ---
 
@@ -46,8 +46,12 @@ function Example() {
 
   return (
     <div className="relative h-64 w-full">
-      <div ref={aRef} className="absolute z-1 w-16 h-16 bg-blue-200">A</div>
-      <div ref={bRef} className="absolute z-5 w-16 h-16 bg-red-200 right-0">B</div>
+      <div ref={aRef} className="absolute z-1 w-16 h-16 bg-blue-200">
+        A
+      </div>
+      <div ref={bRef} className="absolute z-5 w-16 h-16 bg-red-200 right-0">
+        B
+      </div>
       <CurvedArrow startElement={aRef} endElement={bRef} />
     </div>
   );
@@ -168,32 +172,32 @@ Size: `xs`, `sm`, `default`, `lg`, `xl`, `2xl`, `3xl`, … `9xl`
 
 ## ♿ Accessibility
 
-* `UNDER` layer → `role="img"` + `aria-label`
-* `OVER` layer → `aria-hidden="true"`
+- `UNDER` layer → `role="img"` + `aria-label`
+- `OVER` layer → `aria-hidden="true"`
 
 ---
 
 ## ⚡ Performance
 
-* Tracks geometry via `ResizeObserver` + `MutationObserver`
-* Batches updates with `requestAnimationFrame`
-* Ignores sub-pixel geometry changes (<0.5px)
+- Tracks geometry via `ResizeObserver` + `MutationObserver`
+- Batches updates with `requestAnimationFrame`
+- Ignores sub-pixel geometry changes (<0.5px)
 
 ---
 
 ## 🧩 Limitations
 
-* Future curve types: `spiral`, `loop`, `heart`, `infinity`
-* Obstacle avoidance uses heuristic routing
-* Parent container must be **relatively positioned**
+- Future curve types: `spiral`, `loop`, `heart`, `infinity`
+- Obstacle avoidance uses heuristic routing
+- Parent container must be **relatively positioned**
 
 ---
 
 ## 📦 Dependencies
 
-* React
-* `class-variance-authority`
-* Tailwind CSS (recommended)
+- React
+- `class-variance-authority`
+- Tailwind CSS (recommended)
 
 ---
 
@@ -204,6 +208,6 @@ Submit issues or PRs that maintain performance, accessibility, and z-index consi
 
 ---
 
-## 📜 License
+### 📜 License
 
-Released under the **MIT License**.
+Released under the [MIT License](./LICENSE) © 2025 [aliezzahn](https://github.com/aliezzahn)
