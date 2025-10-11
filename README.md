@@ -59,7 +59,7 @@ Render an arrow using absolute coordinates:
 />
 ```
 
-### Obstacle Avoidance
+#### Obstacle Avoidance
 
 Avoid obstacles by passing element refs:
 
