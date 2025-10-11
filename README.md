@@ -1,7 +1,53 @@
 # 🎯 CurvedArrow Component
 
 `CurvedArrow` is a **DOM-aware**, **highly flexible React component** for rendering animated, curved SVG arrows between two elements or coordinates.
-It supports gradient strokes, multiple curve styles, custom arrowheads, obstacle avoidance, and precise two-layer rendering — built for **performance**, **accessibility**, and **dynamic UI experiences** such as diagrams, flowcharts, or visual connectors.
+It supports gradient strokes, multiple curve styles, custom arrowheads, obstacle avoidance, and precise two-layer rendering — built for **performance**, **accessibility**, and **dynamic UI experiences** such as animated, curved SVG arrows between elements or coordinates.
+Perfect for **diagrams, flowcharts, tutorials, and interactive UIs**.
+
+[![Shadcn Compatible](https://img.shields.io/badge/Shadcn-Compatible-brightgreen)](https://ui.shadcn.com)
+[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-✓-38B2AC)](https://tailwindcss.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+
+---
+
+### 🧩 Shadcn-Compatible
+
+`CurvedArrow` is fully **compatible with [shadcn/ui](https://ui.shadcn.com)** and the **Shadcn Registry** ecosystem:
+
+- ✅ Tailwind + CVA-based styling (`variant` & `size`)
+- ✅ Accessible & ARIA-compliant
+- ✅ TypeScript-ready
+- ✅ Drop-in for `awesome-shadcn` projects
+- ✅ Easily installable via NPM, Bun, or PNPM
+
+**Badges:**
+[![Shadcn Compatible](https://img.shields.io/badge/Shadcn-Compatible-brightgreen)](https://ui.shadcn.com)
+[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-✓-38B2AC)](https://tailwindcss.com)
+
+---
+
+### 📥 Installation
+
+```bash
+# npm
+npx shadcn@canary add https://dsa.hncore.website/r/curved-arrow.json
+
+# bun
+bunx --bun shadcn@canary add https://dsa.hncore.website/r/curved-arrow.json
+
+# pnpm
+pnpx shadcn@canary add https://dsa.hncore.website/r/curved-arrow.json
+```
+
+Import the component:
+
+```tsx
+import { CurvedArrow } from "@/components/curved-arrow";
+
+function Demo() {
+  return <CurvedArrow startX={0} startY={0} endX={200} endY={200} />;
+}
+```
 
 ---
 
