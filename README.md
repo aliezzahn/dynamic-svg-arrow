@@ -4,8 +4,8 @@
 It supports gradient strokes, multiple curve styles, custom arrowheads, obstacle avoidance, and precise two-layer rendering — built for **performance**, **accessibility**, and **dynamic UI experiences** such as animated, curved SVG arrows between elements or coordinates.
 Perfect for **diagrams, flowcharts, tutorials, and interactive UIs**.
 
-[![Shadcn Compatible](https://img.shields.io/badge/Shadcn-Compatible-brightgreen)](https://ui.shadcn.com)
-[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-✓-38B2AC)](https://tailwindcss.com)
+[![shadcn/ui](https://img.shields.io/badge/shadcn/ui-✓-38B2AC)](https://ui.shadcn.com)
+[![Modern.js](https://img.shields.io/badge/Modern.js-✓-38B2AC)](https://modernjs.dev/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
 ---
@@ -19,10 +19,6 @@ Perfect for **diagrams, flowcharts, tutorials, and interactive UIs**.
 - ✅ TypeScript-ready
 - ✅ Drop-in for `awesome-shadcn` projects
 - ✅ Easily installable via NPM, Bun, or PNPM
-
-**Badges:**
-[![Shadcn Compatible](https://img.shields.io/badge/Shadcn-Compatible-brightgreen)](https://ui.shadcn.com)
-[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-✓-38B2AC)](https://tailwindcss.com)
 
 ---
 
